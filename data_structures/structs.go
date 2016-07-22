@@ -7,11 +7,11 @@ type Node struct{
 }
 
 type NodeList struct{
-	nodeList [] Node
+	nodeList [] *Node
 }
 
 func (list *NodeList) Add(elem int) {
-	node := Node{data:elem}
+	node := &Node{data:elem}
 	list.nodeList = append(list.nodeList, node)
 }
 
@@ -19,7 +19,7 @@ func (list *NodeList) Search(elem int) *Node {
 
 	for _, node := range list.nodeList{
 		if node.data == elem {
-			return &node
+			return node
 		}
 	}
 	return nil
