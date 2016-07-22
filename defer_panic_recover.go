@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// defers are used for closing the resources *****
+// same as stack push
+// follow the go build, go install and gopath 
 func f() {
 	defer func() {
 		if r := recover(); r != nil {
@@ -27,3 +30,5 @@ func g(i int) {
 	g(i + 1)
 
 }
+
+
