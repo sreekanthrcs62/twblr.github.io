@@ -24,7 +24,7 @@ type Rectangle struct {
 
 
 type Hybrid struct {
-
+	// Better way is to add a slice of type shape list and parse that 
 	s Shape
 	r Shape
 }
