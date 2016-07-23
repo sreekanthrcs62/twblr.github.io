@@ -3,7 +3,7 @@ package interfaces
 import "testing"
 
 func TestAreaofSquare(t *testing.T) {
-	s := Square{side: 2}
+	s := Square{length: 2}
 	result := s.Area()
 
 	if result != 4 {
@@ -21,10 +21,10 @@ func TestAreaofRectangle(t *testing.T) {
 }
 
 func TestAreaofComplexShape(t *testing.T) {
-	s := Square{side: 10}
+	s := Square{length: 10}
 	r := Rectangle{length: 2, breadth: 3}
 
-	h := Hybrid{s, r}
+	h := Hybrid{&s, &r}
 	result := h.Area()
 
 	if result != 106 {
